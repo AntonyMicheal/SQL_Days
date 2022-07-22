@@ -1,1 +1,1 @@
-Hello, This repo contains SQL note
+## Hello, This repo contains SQL note
