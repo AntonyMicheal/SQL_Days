@@ -1,4 +1,6 @@
+
 # Table of Contents
+![Image text](https://cdn.iconscout.com/icon/free/png-256/sql-29-1127899.png)
 1. [General Info](#general-info)
 2. [Introductory Commands](#introcommmands)
 <!-- 3. [Installation](#installation)
@@ -8,23 +10,21 @@
 <a name="general-info"></a>
 ### General Info
 ***
-Write down general information about your project. It is a good idea to always put a project status in the readme file. This is where you can add it. 
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-
+SQL - Structured Query language is a language to interact with a database, to retrieve, insert and manipulate the database according to our need.
+In this journey we will be learning SQL in a daily basis.
 
 <a name="introcommmands"></a>
 ### Introductory Commands
 ***
-
-1. CREATE
-2. DATABASE
-3. TABLE
-4. USE
-5. DESCRIBE
-6. EXPLAIN
-7. DROP
-8. ALTER
+1. SHOW
+2. CREATE
+3. DATABASE
+4. TABLE
+5. USE
+6. DESCRIBE
+7. EXPLAIN
+8. DROP
+9. ALTER
 
 ```
 
