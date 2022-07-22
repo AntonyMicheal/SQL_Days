@@ -32,3 +32,19 @@ CREATE DATABASE <Database_name>
 
 ```
 
+
+
+<h2>INDEX</h2>
+
+<table>
+  <tr>
+    <th>DAYS</th>
+    <th>CONTENT</th>
+
+  </tr>
+  <tr>
+    <td>Day-1 </td>
+    <td>Covered all the basic commands such as CREATE, DATABASE, USE, TABLE etc.</td>
+
+  </tr>
+</table>
