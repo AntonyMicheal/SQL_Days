@@ -1,4 +1,4 @@
-## Table of Contents
+# Table of Contents
 1. [General Info](#general-info)
 2. [Introductory Commands](#introcommmands)
 <!-- 3. [Installation](#installation)
