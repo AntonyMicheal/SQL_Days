@@ -2,8 +2,9 @@
 # Table of Contents
 ![Image text](https://cdn.iconscout.com/icon/free/png-256/sql-29-1127899.png)
 1. [General Info](#general-info)
-2. [Introductory Commands](#introcommmands)
-<!-- 3. [Installation](#installation)
+2. [DDL Commands](#introcommmands)
+3. [DML Commands](#dml)
+<!-- 
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
 -->
@@ -14,21 +15,22 @@ SQL - Structured Query language is a language to interact with a database, to re
 In this journey we will be learning SQL in a daily basis.
 
 <a name="introcommmands"></a>
-### Introductory Commands
+### DDL Commands (Data Defenition Language)
 ***
-1. SHOW
-2. CREATE
-3. DATABASE
-4. TABLE
-5. USE
-6. DESCRIBE
-7. EXPLAIN
-8. DROP
-9. ALTER
-
-
-### STEPS
-
+```
+1. CREATE
+2. ALTER
+3. TRUNCATE
+4. DROP
+```
+<a name="dml"></a>
+### DML Commands
+```
+1. INSERT
+2. UPDATE
+3. DELETE
+4. MERGE
+```
 
 Showing all the databases that are present.
 
@@ -60,9 +62,9 @@ CREATE TABLE customers(
 );
 
 CREATE TABLE products(
-	id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(20),
-    price DECIMAL(3,2)
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   product_name VARCHAR(20),
+   price DECIMAL(3,2)
 );
 
 ```
