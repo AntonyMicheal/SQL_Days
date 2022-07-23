@@ -31,7 +31,7 @@ CREATE TABLE products(
 
 -- How to set foreign key 
 
-
+drop table orders;
 CREATE TABLE orders(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT,

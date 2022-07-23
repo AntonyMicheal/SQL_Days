@@ -1,70 +1,62 @@
 create database test;
-
 use test;
-
-create table adresses (
-	id int,
-    house_number int,
-    city varchar(30),
-    post_code varchar(7)
-);
-
 
 create table people(
 	id int,
-    first_name varchar(20),
-    last_name varchar(20),
+    f_name varchar(20),
+    l_name varchar(20),
     address_id int
 );
 
+create table address(
+	id int,
+    house_number int,
+    city varchar(20),
+    postal_code varchar(7)
+);
 
 create table pets(
 	id int,
-    name varchar(20),
-    species varchar(20),
-    owner_id int
+    owner_id int,
+    pet_name varchar(20),
+    speciese varchar(20)
 );
 
 
-show tables;
---  HOW TO ADD PRIMARY KEY
+-- Adding primary key
 
-ALTER TABLE adresses ADD PRIMARY KEY (id);
+alter table people add primary key(id);
+alter table address add primary key(id);
+alter table pets add primary key(id);
 
-describe adresses;
--- HOW TO REMOVE PRIMARY KEY
+-- Adding foreign key 
 
-ALTER TABLE adresses DROP PRIMARY KEY;
+alter table people add constraint fk_people foreign key(address_id) references address(id);
 
-describe adresses;
+alter table pets add constraint fk_pets foreign key(owner_id) references people(id);
 
+-- remove foreign key
 
-ALTER TABLE adresses ADD PRIMARY KEY (id);
-ALTER TABLE people ADD PRIMARY KEY (id);
+alter table pets drop foreign key fk_pets;
 
-ALTER TABLE people 
-ADD CONSTRAINT FK_PeopleAddress
-FOREIGN KEY(address_id) REFERENCES adresses(id);
+-- remove primary key
 
-describe people;
+alter table people drop primary key;
 
-alter table people drop foreign key FK_PeopleAddress;
+-- adding unique
 
-describe people;
-
--- CHANGE COLUMN NAME 
-
-ALTER TABLE pets CHANGE `species` `animal_type` VARCHAR(20);
+alter table pets add constraint u_pets unique(id);
+alter table pets add constraint u_pets_name unique(pet_name);
 describe pets;
 
-alter table pets change `animal_type` `species` varchar(20);
+alter table pets drop index u_pets_name;
 
-describe pets;
+-- change column name 
 
+alter table pets change `speciese` `type` varchar(20);
+alter table pets change `type` `speciese` varchar(20);
 
--- CHANGE COLUMN DATATYPE
+-- change column datatype
 
-alter table adresses modify city varchar(50);
-
-describe adresses;
-
+alter table pets modify speciese int;
+alter table pets modify speciese varchar(20);
